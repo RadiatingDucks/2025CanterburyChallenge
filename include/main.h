@@ -74,11 +74,11 @@ void opcontrol(void);
 /**
  * You can add C++-only headers here
  */
-#include "subsystemHeaders\angler.hpp"
 #include "subsystemHeaders\drive.hpp"
 #include "subsystemHeaders\globals.hpp"
 #include "subsystemHeaders\intake.hpp"
 #include "subsystemHeaders\lift.hpp"
+#include "subsystemHeaders\clamp.hpp"
 //#include <iostream>
 #endif
 

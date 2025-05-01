@@ -1,4 +1,6 @@
 #include "main.h"
+#pragma once
+#include "api.h"
 
 //MOTORS
 extern pros::Motor driveLeftFront;
@@ -19,3 +21,6 @@ extern pros::MotorGroup lift_group;
 
 //CONTROLLER
 extern pros::Controller Cotton_candy;
+
+//PNEUMATICS
+extern pros::ADIDigitalOut clamp;
