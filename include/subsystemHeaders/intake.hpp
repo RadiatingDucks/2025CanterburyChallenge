@@ -1,7 +1,7 @@
 #include "main.h"
 
 //HELPING FUNCTIONS
-void setIntake(int left, int right);
+void setIntake(int power);
 
 //DRIVER CONTROL FUNCTIONS
 void setIntakeMotors();
