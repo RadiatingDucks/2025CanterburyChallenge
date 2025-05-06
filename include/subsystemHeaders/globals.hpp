@@ -10,9 +10,6 @@ extern pros::Motor driveRightBack;
 extern pros::Motor LiftLeft;
 extern pros::Motor LiftRight;
 
-//for tutorial purposes
-extern pros::Motor intakeLeft;
-extern pros::Motor intakeRight;
 
 //MOTORGROUPS
 extern pros::MotorGroup left_group;

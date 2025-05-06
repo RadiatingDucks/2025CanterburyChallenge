@@ -19,9 +19,5 @@ pros::MotorGroup lift_group({5, -6});
 //CONTROLLER
 pros::Controller Cotton_candy(pros::E_CONTROLLER_MASTER);
 
-//MISCELLANEOUS
-pros::Motor intakeLeft(7, pros::v5::MotorGears::green, pros::v5::MotorUnits::counts);
-pros::Motor intakeRight(-8, pros::v5::MotorGears::green, pros::v5::MotorUnits::counts);
-
 // Pneumatic declaration
 pros::ADIDigitalOut clamp('A');  
