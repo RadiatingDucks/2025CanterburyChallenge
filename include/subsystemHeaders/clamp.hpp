@@ -5,4 +5,4 @@
 //FUNCTION FOR PENUMATICS
 void toggleClamp();
 
-bool clampState;
+extern bool clampState;
