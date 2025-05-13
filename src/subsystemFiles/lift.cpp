@@ -2,7 +2,7 @@
 
 //HELPING FUNCTIONS
 void setLift(int power){
-    lift_group.move(power);
+    lift_group.move_relative(power,60);
 }
 
 

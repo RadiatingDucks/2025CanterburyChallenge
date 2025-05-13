@@ -79,6 +79,7 @@ void opcontrol(void);
 #include "subsystemHeaders\intake.hpp"
 #include "subsystemHeaders\lift.hpp"
 #include "subsystemHeaders\clamp.hpp"
+#include <iostream>
 //#include <iostream>
 #endif
 
