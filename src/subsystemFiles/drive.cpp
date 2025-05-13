@@ -31,7 +31,7 @@ void setDriveMotors(){
         rightJoystick = 0;
     }
 
-    setDrive(leftJoystick, rightJoystick); 
+    setDrive(-leftJoystick, -rightJoystick); 
 
     pros::delay(20);
 
