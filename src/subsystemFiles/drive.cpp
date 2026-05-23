@@ -9,13 +9,28 @@ void setDrive(int left, int right){
     right_group.move(right);
 } 
 
+void resetDriveEncoders(){
+
+    driveLeftFront.tare_position();
+    driveLeftBack.tare_position();
+    driveRightFront.tare_position();
+    driveRightBack.tare_position();
+
+}
+
+double AvgDriveEncoderValue(){
+    return (fabs(driveLeftFront.get_position()) +
+           fabs(driveRightFront.get_position()) +
+           fabs(driveLeftBack.get_position()) +
+           fabs(driveRightBack.get_position())) / 4;
+}
 
 /* void driveValues(int vertical, int horizontal){
     left_group.move(vertical + horizontal);
     right_group.move(vertical - horizontal);
 } */
 
-//DRIVER CONTROL FUNCTIONS
+//DRIVER CONTROL FUNCTION
 void setDriveMotors(){
 
     //This is example code from a tutorial for a tank drive
@@ -30,6 +45,9 @@ void setDriveMotors(){
     if (abs(rightJoystick) < 10) {
         rightJoystick = 0;
     }
+
+    leftJoystick = (leftJoystick * leftJoystick * leftJoystick) / 16129;
+    rightJoystick = (rightJoystick * rightJoystick * rightJoystick) / 16129;
 
     setDrive(-leftJoystick, -rightJoystick); 
 
@@ -51,4 +69,40 @@ void setDriveMotors(){
         
 		pros::delay(20); */                               // Run for 20 ms then update
 
+}
+
+//AUTON
+void translate(int units, int voltage){
+
+    resetDriveEncoders();
+
+    //define a direction based on units provided
+    int direction = abs(units) / units ; //returns 1 or -1
+
+    while ( AvgDriveEncoderValue() < abs(units))
+    {
+        setDrive(voltage * direction,voltage * direction);
+        pros::delay(10);
+    }
+    
+    //stopping momentum
+    setDrive(-10 * direction,-10 * direction);
+    //this value changes based on robot weight
+    pros::delay(50);
+
+    //setting value to neutral
+    setDrive(0,0);
+
+}
+ 
+void turn(int units, int voltage){
+    resetDriveEncoders();
+    int direction = abs(units) / units;
+    while (AvgDriveEncoderValue() < abs(units)) {
+        setDrive(voltage * direction, -voltage * direction);
+        pros::delay(10);
+    }
+    setDrive(-10 * direction, 10 * direction);
+    pros::delay(50);
+    setDrive(0, 0);
 }

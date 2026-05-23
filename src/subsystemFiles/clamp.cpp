@@ -2,7 +2,7 @@
 
 bool State = false;
 
-void toggleClamp() {
+void toggleArm() {
     static bool lastButtonState = false;
     bool currentButtonState = Cotton_candy.get_digital(pros::E_CONTROLLER_DIGITAL_X);
 

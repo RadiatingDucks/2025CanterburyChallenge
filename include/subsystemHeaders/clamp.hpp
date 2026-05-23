@@ -3,6 +3,6 @@
 #pragma once
 
 //FUNCTION FOR PENUMATICS
-void toggleClamp();
+void toggleArm();
 
-extern bool clampState;
+extern bool armState;

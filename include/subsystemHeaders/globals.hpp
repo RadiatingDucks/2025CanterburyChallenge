@@ -20,4 +20,4 @@ extern pros::MotorGroup lift_group;
 extern pros::Controller Cotton_candy;
 
 //PNEUMATICS
-extern pros::ADIDigitalOut clamp;
+extern pros::ADIDigitalOut arm;
