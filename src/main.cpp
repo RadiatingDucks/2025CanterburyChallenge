@@ -29,9 +29,11 @@ void initialize() {
 
 	pros::lcd::register_btn1_cb(on_center_button);
 
-	left_group.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	right_group.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+
 	lift_group.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+
+	left_group.set_brake_mode(pros::E_MOTOR_BRAKE_BRAKE);
+	right_group.set_brake_mode(pros::E_MOTOR_BRAKE_BRAKE);
 }
 
 /**
@@ -64,7 +66,7 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	translate(int units, int voltage);
+	translate(3, 50);
 }
 
 /**
