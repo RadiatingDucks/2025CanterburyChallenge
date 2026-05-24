@@ -12,8 +12,8 @@ pros::Motor LiftRight(-6, pros::v5::MotorGears::green, pros::v5::MotorUnits::cou
 
 
 //MOTORGROUPS
-pros::MotorGroup left_group({12, 13});
-pros::MotorGroup right_group({-1, -2});
+pros::MotorGroup left_group({-12, -13});
+pros::MotorGroup right_group({1, 2});
 pros::MotorGroup lift_group({5, -6});
 
 //CONTROLLER
