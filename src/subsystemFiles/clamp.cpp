@@ -1,14 +1,14 @@
 #include "main.h"
 
-bool State = false;
+bool clampState = false;
 
 void toggleClamp() {
     static bool lastButtonState = false;
     bool currentButtonState = Cotton_candy.get_digital(pros::E_CONTROLLER_DIGITAL_X);
 
     if (currentButtonState && !lastButtonState) {
-        State = !State;
-        clamp.set_value(State);
+        clampState = !clampState;
+        clamp.set_value(clampState);
     }
 
     lastButtonState = currentButtonState;

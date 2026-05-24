@@ -20,4 +20,4 @@ pros::MotorGroup lift_group({5, -6});
 pros::Controller Cotton_candy(pros::E_CONTROLLER_MASTER);
 
 // Pneumatic declaration
-pros::ADIDigitalOut arm('A');  
+pros::ADIDigitalOut clamp('A');  

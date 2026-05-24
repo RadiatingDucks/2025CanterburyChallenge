@@ -66,7 +66,7 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	translate(3, 50);
+	translate(800, 80);
 }
 
 /**
@@ -92,5 +92,6 @@ void opcontrol() {
 		setDriveMotors();
 		toggleClamp();
 		setLiftMotors();
+		pros::delay(10);
 	}
 }
